@@ -1,5 +1,8 @@
 correct_dependency_ids: {}
-dependencies: []
+dependencies:
+- dep_id: dep_f9zpbbekxi77xa
+  version: {dev: false}
+  resolution_hints: {app_id: 4ZOY2V7PCFCVYUVH, name: MMG Skins & Birdies, package_name: Birdies}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -12,7 +15,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Home}
-package_name: Nelson_Ladies_Golf
+package_name: MidMorningGolf
 allow_embedding: false
 name: New Mid Morning Golf
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
