@@ -1,0 +1,68 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+components:
+- type: ColumnPanel
+  properties: {role: outlined-card, col_widths: '{"ZBTKWN":19,"PWNVJP":41}'}
+  name: outlined_card_2
+  layout_properties:
+    col_widths: {}
+    grid_position: IHXOBI,QPEDNC
+  components:
+  - type: Button
+    properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add a New Tee Time, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:plus'}
+    name: button_add
+    layout_properties:
+      col_widths: {}
+      grid_position: MJOCGJ,ZBTKWN
+    event_bindings: {click: button_add_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Note:  Only the Organizer can edit / delete the tee time.',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'MJOCGJ,PWNVJP'}
+  - type: Button
+    properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Refresh Lists, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:refresh'}
+    name: button_1
+    layout_properties: {grid_position: 'SNXQYV,UPFACI'}
+    event_bindings: {click: button_1_click}
+  - type: DataGrid
+    properties:
+      role: tonal-data-grid
+      columns:
+      - {id: HGJHIN, title: Date, data_key: date, width: 141, expand: false}
+      - {id: RTVHKU, title: Course & Time, data_key: activity, width: 160, expand: false}
+      - {id: JNYMFX, title: '[Organizer] & Comments', data_key: comments, width: 350,
+        expand: false}
+      - {id: WIZXTK, title: Sign Up, data_key: '', width: 61, expand: true}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 100
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: none
+      spacing_below: none
+      background: ''
+    name: data_grid_activities
+    layout_properties: {grid_position: 'OFGWAX,OMYKRO'}
+    components:
+    - type: RepeatingPanel
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Home.Components.GolfSignupComponent.GolfTemplate,
+        background: ''}
+      name: repeating_panel_activites
+      layout_properties: {}
+is_package: true

@@ -1,0 +1,27 @@
+container: {type: ColumnPanel}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_activities
+  layout_properties:
+    col_widths: {}
+    grid_position: IIQDMB,FEXJSJ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 11, font: menlo, spacing_above: none, icon_align: left, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_activities_detail
+  layout_properties:
+    col_widths: {}
+    grid_position: PZHBRG,HTNLXX
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
+    background: ''}
+  name: tee_times_card
+  layout_properties:
+    col_widths: {}
+    grid_position: NDTWBG,NHYJCU
+is_package: true

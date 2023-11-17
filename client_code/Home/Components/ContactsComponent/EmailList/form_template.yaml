@@ -1,0 +1,9 @@
+container: {type: ColumnPanel}
+components:
+- type: Label
+  properties: {}
+  name: lbl_email
+  layout_properties:
+    col_widths: {}
+    grid_position: FVSAOC,MMTJOZ
+is_package: true

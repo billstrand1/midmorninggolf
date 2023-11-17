@@ -1,0 +1,50 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"MDQBQT":4,"BXUFWN":27,"CRKHUG":4,"KKNNOJ":40}',
+    spacing_below: small, background: ''}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000000',
+    visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
+    spacing_below: none, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties:
+    col_widths: {}
+    grid_position: FJNDEN,MDQBQT
+- type: Link
+  properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#ff2600',
+    visible: false, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: none,
+    spacing_above: medium, icon_align: left, col_widths: '{}', spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:trash-o'}
+  name: link_delete_participant
+  layout_properties:
+    col_widths: {}
+    grid_position: FJNDEN,CRKHUG
+  components: []
+  event_bindings: {click: link_delete_participant_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000000',
+    visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
+    spacing_below: none, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_participant
+  layout_properties:
+    col_widths: {}
+    grid_position: FJNDEN,BXUFWN
+  data_bindings:
+  - {property: text, code: 'self.item[''sign_up_name'']'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000000',
+    visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
+    spacing_below: none, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_comments
+  layout_properties:
+    col_widths: {}
+    grid_position: FJNDEN,KKNNOJ
+  data_bindings:
+  - {property: text, code: 'self.item[''comment'']'}
+is_package: true
+item_type: {table_id: 424624}

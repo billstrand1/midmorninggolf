@@ -1,0 +1,37 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+components:
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select a name from the list...
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: drop_down_names
+  layout_properties: {grid_position: 'YBHWHL,IKWLRF'}
+- type: Button
+  properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Sign Up, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_signup_player
+  layout_properties: {grid_position: 'DPSNKD,BTPMNG'}
+  event_bindings: {click: button_signup_player_click}
+is_package: true

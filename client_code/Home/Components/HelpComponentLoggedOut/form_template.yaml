@@ -1,0 +1,95 @@
+container: {type: ColumnPanel}
+components:
+- type: ColumnPanel
+  properties: {role: outlined-card, col_widths: '{"PGVEJE":10,"MERNYM":12,"IUHYBR":48,"PNPKDX":43}'}
+  name: outlined_card_1
+  layout_properties:
+    col_widths: {}
+    grid_position: FGSALE,AUSWYG
+  components:
+  - type: Label
+    properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Contact Support, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: title_label
+    layout_properties:
+      col_widths: {}
+      grid_position: YJMQAI,UPAYQX
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: FRZPMF,KIOMHX
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Your Name:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: name_label
+    layout_properties:
+      col_widths: {}
+      grid_position: ZMEOAF,PGVEJE
+      full_width_row: false
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter your name....,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: name_box
+    layout_properties:
+      col_widths: {}
+      grid_position: ZMEOAF,PNPKDX
+      full_width_row: false
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Your Email:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email_label
+    layout_properties:
+      col_widths: {}
+      grid_position: SDHKSH,MERNYM
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter your email address....,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: email, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: email_box
+    layout_properties:
+      col_widths: {}
+      grid_position: SDHKSH,IUHYBR
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Questions or Comments:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: comments_title
+    layout_properties:
+      col_widths: {}
+      grid_position: KNKOMU,KQCOIP
+  - type: TextArea
+    properties: {role: null, align: left, height: '', tooltip: '', placeholder: Enter questions here....,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: comment_area
+    layout_properties:
+      col_widths: {}
+      grid_position: UMIYGC,ZLMVSD
+  - type: Button
+    properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'Submit
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: submit_button
+    layout_properties:
+      col_widths: {}
+      grid_position: LKTDIB,DMUIWV
+    event_bindings: {click: submit_button_click}
+is_package: true

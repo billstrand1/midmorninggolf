@@ -1,0 +1,184 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: false, enable_automatically: false, use_email: true,
+    confirm_email: false, allow_remember_me: true, remember_me_days: 365}
+  server_config: {user_table: users}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Home}
+package_name: Nelson_Ladies_Golf
+allow_embedding: false
+name: Clone of Nelson Ladies Golf
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+metadata: {logo_img: 'asset:golf ball.jpg'}
+startup_form: null
+db_schema:
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: full_name
+      admin_ui: {width: 147.26086950302124}
+      type: string
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: ladies_golf_team
+      admin_ui: {width: 128.258154}
+      type: number
+    - name: ladies_golf
+      admin_ui: {width: 121}
+      type: bool
+    - name: enabled
+      admin_ui: {width: 100}
+      type: bool
+    - name: admin
+      admin_ui: {width: 84.26086950302124}
+      type: bool
+    - name: ghin_no
+      admin_ui: {width: 103}
+      type: string
+    - name: first_name
+      admin_ui: {width: 103.26086950302124}
+      type: string
+    - name: last_name
+      admin_ui: {width: 133.26086950302124}
+      type: string
+    - name: password_hash
+      admin_ui: {width: 200}
+      type: string
+    - name: phone
+      admin_ui: {width: 143.51358556747437}
+      type: string
+    - name: birth_date
+      admin_ui: {width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {width: 50}
+      type: number
+    - name: signed_up
+      admin_ui: {width: 53}
+      type: datetime
+    - name: last_login
+      admin_ui: {width: 189.25}
+      type: datetime
+    - name: remembered_logins
+      admin_ui: {width: 155.519026}
+      type: simpleObject
+    - name: comments
+      admin_ui: {width: 102.26086950302124}
+      type: string
+    - name: date_joined
+      admin_ui: {width: 95.5}
+      type: date
+    - name: updated
+      admin_ui: {width: 146}
+      type: datetime
+    - name: created
+      admin_ui: {width: 115}
+      type: datetime
+    - name: super_user
+      admin_ui: {width: 132}
+      type: bool
+    - name: tpc_hcp
+      admin_ui: {width: 92.26086950302124}
+      type: number
+    - name: cwv_hcp
+      admin_ui: {width: 86.25}
+      type: number
+    - name: index
+      admin_ui: {width: 74.26086950302124}
+      type: number
+    - name: tournament_director
+      admin_ui: {width: 119}
+      type: bool
+    - name: playday_director
+      admin_ui: {width: 142}
+      type: bool
+    - name: spouse
+      admin_ui: {width: 85.52174}
+      type: link_single
+      target: users
+    - name: confirmed_email
+      admin_ui: {width: 200}
+      type: bool
+  activities:
+    title: activities
+    client: search
+    server: full
+    columns:
+    - name: activity
+      admin_ui: {width: 84.26087000000001}
+      type: string
+    - name: course
+      admin_ui: {width: 110.26087000000001}
+      type: string
+    - name: comments
+      admin_ui: {width: 111.25543799999997}
+      type: string
+    - name: golf
+      admin_ui: {width: 70.52174}
+      type: bool
+    - name: other
+      admin_ui: {width: 50}
+      type: bool
+    - name: dinner
+      admin_ui: {width: 53.25815399999999}
+      type: bool
+    - name: week_day
+      admin_ui: {width: 73.255438}
+      type: number
+    - name: owner
+      admin_ui: {width: 112}
+      type: link_single
+      target: users
+    - name: act_date_time
+      admin_ui: {width: 200}
+      type: date
+  participation:
+    title: participation
+    client: search
+    server: full
+    columns:
+    - name: activity
+      admin_ui: {width: 133.76630999999998}
+      type: link_single
+      target: activities
+    - name: sign_up_name
+      admin_ui: {width: 122.26087000000001}
+      type: string
+    - name: comment
+      admin_ui: {width: 200}
+      type: string
+    - name: participant
+      admin_ui: {width: 169.258154}
+      type: link_single
+      target: users
+    - name: participation_date_time
+      admin_ui: {width: 200}
+      type: date
+  comments:
+    title: comments
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: comments
+      admin_ui: {width: 266.26087}
+      type: string
+    - name: created
+      admin_ui: {width: 200}
+      type: datetime
+renamed: true

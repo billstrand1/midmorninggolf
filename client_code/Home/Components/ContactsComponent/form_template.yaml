@@ -1,0 +1,50 @@
+container: {type: ColumnPanel}
+components:
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Contact Information
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
+  name: label_contacts
+  layout_properties:
+    col_widths: {}
+    grid_position: TRPSRR,VGRWLX
+- type: Button
+  properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Create email list, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: btn_get_email_list
+  layout_properties:
+    col_widths: {}
+    grid_position: PLRLBH,PXRSVK
+  event_bindings: {click: btn_get_email_list_click}
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {id: NMAFDC, title: Name, data_key: '', width: 154, expand: false}
+    - {id: EGHCZK, title: Email, data_key: email, width: 268, expand: false}
+    - {id: KPOGXM, title: Cell, data_key: phone, expand: true}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 30
+    visible: true
+    wrap_on: never
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: contact_grid
+  layout_properties:
+    col_widths: {}
+    grid_position: RDUWDP,RTYYID
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: Home.Components.ContactsComponent.ContactsRowTemplate}
+    name: contact_panel
+    layout_properties: {}
+is_package: true
