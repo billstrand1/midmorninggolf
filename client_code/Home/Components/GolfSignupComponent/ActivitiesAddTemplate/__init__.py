@@ -54,9 +54,9 @@ class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
     #add participant to sign-up list
     user = navigation.the_user()
   
-    if user['spouse']:
-      spouse = user['spouse']
-    else: spouse = None  
+    # if user['spouse']:
+    #   spouse = user['spouse']
+    spouse = None  
 
 #  FROM ACTIVITY SERVER CODE
     either_user_or_spouse = app_tables.participation.search(activity=activity, participant=q.any_of(user, spouse))

@@ -49,32 +49,34 @@ class GolfTemplate(GolfTemplateTemplate):
     #add participant to sign-up list
     user = navigation.the_user()
   
-    if user['spouse']:
-      spouse = user['spouse']
-    else: spouse = None  
+    # if user['spouse']:
+    #   spouse = user['spouse']
+    spouse = None  
 
 #  FROM ACTIVITY SERVER CODE
     either_user_or_spouse = app_tables.participation.search(activity=self.item, participant=q.any_of(user, spouse))
     if len(either_user_or_spouse) > 0:
       print('either_user_or_spouse > 0 ACTIVITY CLIENT')
-      if user['spouse'] == None:
-        print('Single person already signed up')
-        message = "You have already signed up for this Tee Time." 
-        alert(message)
-        return  
+      # if user['spouse'] == None:
+      #   print('Single person already signed up')
+      #   message = "You have already signed up for this Tee Time." 
+      #   alert(message)
+      #   return  
       
-      print('Couple already signed up')
-      message = "You or your spouse have already signed up for one or both of you, please delete and re-sign up if you'd like to make a change."
+      # print('Couple already signed up')
+      # message = "You or your spouse have already signed up for one or both of you, please delete and re-sign up if you'd like to make a change."
+      message = "You have already signed up, please delete and re-sign up if you'd like to change your comments."
+
       alert(message)
       return
 
-    sign_up_name = f"{user['first_name']} {user['last_name'][0]}"
+    signup_name = user['signup_name'] #f"{user['first_name']} {user['last_name'][0]}"
       
       
     signup_message = f"Enter comments here."    
     t = TextBox(placeholder=signup_message, type="text")
 #     t = TextBox(placeholder=signup_message, type="text")
-    title = f"{sign_up_name}, if you have any comments please enter them below, then Save."
+    title = f"{signup_name}, if you have any comments please enter them below, then Save."
 #     result = alert(title=title, content=t,
    
     result = alert(title=title, content=t,
@@ -83,10 +85,10 @@ class GolfTemplate(GolfTemplateTemplate):
              buttons=[("Cancel", False), ("Save", True)])
               
     if result:
-      print(f"The user chose {sign_up_name}")
+      print(f"The user chose {signup_name}")
       comment = t.text
       date_time = self.item['act_date_time']
-      message = anvil.server.call('add_participant', self.item, user, sign_up_name, spouse, date_time, comment)  
+      message = anvil.server.call('add_participant', self.item, user, signup_name, spouse, date_time, comment)  
       alert(message)
 
     navigation.go_home()

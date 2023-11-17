@@ -11,7 +11,7 @@ import pandas as pd
 #---------CONTACTS--------------------------------  
 @anvil.server.callable  
 def get_email_list():
-  all_users = app_tables.users.search(tables.order_by("last_name", ascending=True), enabled=True, ladies_golf=True)
+  all_users = app_tables.users.search(tables.order_by("last_name", ascending=True), enabled=True)
   email_list = []
   for user in all_users:
     email_list.append(user['email'])
@@ -22,7 +22,7 @@ def get_email_list():
 @anvil.server.callable
 def get_directory():  #gets all contacts
   all_players = app_tables.users.search(
-    tables.order_by("last_name", ascending=True), enabled=True, ladies_golf=True)
+    tables.order_by("last_name", ascending=True), enabled=True)
 
 #   for player in all_players:
 #     if player['ladies_golf_team'] == 2:

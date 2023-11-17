@@ -28,14 +28,16 @@ class GolfSignupComponent(GolfSignupComponentTemplate):
 
   def get_correct_tee_times_for_team(self, **event_args ):
     user = navigation.the_user()
-    if user['ladies_golf_team'] == 3:
-      print(f" Team 3") 
-      saturday_only_activities = anvil.server.call('get_all_future_activities_saturday')
-      return saturday_only_activities
-    else:
-      print('Team 1 or 2')      
-      future_golf = anvil.server.call('get_all_future_activities')
-      return future_golf
+    future_golf = anvil.server.call('get_all_future_activities')
+    return future_golf
+    # if user['ladies_golf_team'] == 3:
+    #   print(f" Team 3") 
+    #   saturday_only_activities = anvil.server.call('get_all_future_activities_saturday')
+    #   return saturday_only_activities
+    # else:
+    #   print('Team 1 or 2')      
+    #   future_golf = anvil.server.call('get_all_future_activities')
+    #   return future_golf
 
   #------------------------WORKING ON EDIT / DELETE / REFRESH-------------
   def refresh_activities(self, **event_args):

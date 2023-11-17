@@ -28,9 +28,9 @@ class HomeDetailsComponent(HomeDetailsComponentTemplate):
 
     
     #----Get Couple's Activities Info,.
-    if user['spouse']:
-      spouse = user['spouse']
-    else: spouse = None
+    # if user['spouse']:
+    #   spouse = user['spouse']
+    spouse = None
       
     activities_message_1, activities_message_2 = anvil.server.call('get_user_or_spouse_activities_str', user, spouse)
     self.label_activities.text = activities_message_1

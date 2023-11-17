@@ -52,7 +52,7 @@ components:
   layout_properties: {slot: left-nav}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Ladies Golf, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: MMG, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_title

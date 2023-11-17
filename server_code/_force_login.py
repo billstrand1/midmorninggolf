@@ -7,45 +7,22 @@ import anvil.server
 
 #---------TO BE COMMENTED OUT BEFORE CLONING, called from Home
 
-# @anvil.server.callable
-# def force_debug_login():
-#   anvil.users.force_login(app_tables.users.get(email="billstrand1@yahoo.com"))
+@anvil.server.callable
+def force_debug_login():
+  anvil.users.force_login(app_tables.users.get(email="reid.baker@sbcglobal.net"))
   
 # billstrand1@yahoo.com
-
-'''
-Jean Baik
-Linda Borek
-Amy Brechin
-Carol Cashman
-Sandra Ehlert
-Lydia Karney
-'''
-
-#    margaritaacosta@mac.com
-#       jeanbaik14@gmail.com
-#   linda.borek@ntctexas.com
-#      abbrech@sbcglobal.net
-# dbutler@butleradvisers.com
-#       cacashman@swbell.net
-# lowellechilders@icloud.com
-#    sehlert51@sbcglobal.net
-#   diane.fannon@outlook.com
-#     jhancock89@verizon.net
-#      mindy_heard@yahoo.com
-#      champmargie@gmail.com
-#      michele@hoovermld.com
-#      pamalyn1000@gmail.com
-#       lgkarney@prodigy.net
-#      kenkels@sbcglobal.net
-#    breckmason1@outlook.com
-#        pattymathes@att.net
-#     shara@the-mcclures.org
-# donnanorthcutt@verizon.net
-#       cesparks@hotmail.com
-#   jodystewart01@icloud.com
-#        shackeron@gmail.com
-#       pamstrand1@yahoo.com
-#       michelenetpar@me.com
-#   sware@butleradvisers.com
-# debby-williams@hotmail.com
+#  reid.baker@sbcglobal.net
+#        wbarnard96@aol.com
+#        rbaumgarth@aol.com
+#        rick@rickbesse.com
+#  frank.broyles@utexas.edu
+#  jacklcarroll@verizon.net
+# vanhorn_davis@verizon.net
+#   kent.fannon@verizon.net
+#         cmfitzg@gmail.com
+#    rcraighumphrey@msn.com
+#   mkilanowski@verizon.net
+#     billstrand1@yahoo.com
+#    jimwickham@verizon.net
+# dougwilliams9@hotmail.com

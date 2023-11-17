@@ -16,7 +16,7 @@ class Form1(Form1Template):
 
     # Any code you write here will run before the form opens.
     user = navigation.the_user()
-    user_spouse = user['spouse']
+    user_spouse = None #user['spouse']
 #     print(f"ItemTemplate1 self.item: {self.item['participant'][]}, {user['couple_name']}, {user['first_name']}")
     self.link_delete_participant.visible = False
     

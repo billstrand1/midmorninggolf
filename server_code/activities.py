@@ -81,12 +81,12 @@ def add_activity(activity_title, activity_comments,
   weekday = input_activity_date_picker.weekday()
   print(f"Adding activity weekday # {weekday}")
   
-  if weekday < 5 and activity_user['ladies_golf_team'] == 3:
-    print('Team 3, not adding a weekday tee time')
-    return 'Sorry, you can only create Saturday tee times'
+  # if weekday < 5 and activity_user['ladies_golf_team'] == 3:
+  #   print('Team 3, not adding a weekday tee time')
+  #   return 'Sorry, you can only create Saturday tee times'
   
   new_activity = app_tables.activities.add_row(activity=tee_time_info, comments=activity_comments,act_date_time=input_activity_date_picker,
-                               golf=input_check_box_golf, dinner=input_check_box_meals, other=input_check_box_other,
+                               golf=input_check_box_golf, 
                                owner=activity_user, week_day=weekday, course=course)
   return 'Tee time created, thanks', new_activity
 
