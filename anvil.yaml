@@ -1,8 +1,8 @@
 correct_dependency_ids: {}
 dependencies:
-- dep_id: dep_f9zpbbekxi77xa
+- dep_id: dep_40so1sa9hnbidh
   version: {dev: false}
-  resolution_hints: {app_id: 4ZOY2V7PCFCVYUVH, name: MMG Skins & Birdies, package_name: Birdies}
+  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}

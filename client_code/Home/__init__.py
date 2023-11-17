@@ -5,7 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.users
-import Birdies
+
 
 # from .. import Globals
 from .. import navigation
@@ -15,7 +15,7 @@ from .Components.HomeAnonComponent import HomeAnonComponent
 from .Components.HomeDetailsComponent import HomeDetailsComponent
 from .Components.HelpComponentLoggedIn import HelpComponentLoggedIn
 from .Components.HelpComponentLoggedOut import HelpComponentLoggedOut
-
+# import Birdies
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
