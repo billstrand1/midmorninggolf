@@ -7,9 +7,9 @@ import anvil.server
 
 #---------TO BE COMMENTED OUT BEFORE CLONING, called from Home
 
-@anvil.server.callable
-def force_debug_login():
-  anvil.users.force_login(app_tables.users.get(email="jacklcarroll@verizon.net"))
+# @anvil.server.callable
+# def force_debug_login():
+#   anvil.users.force_login(app_tables.users.get(email="jacklcarroll@verizon.net"))
   
 # billstrand1@yahoo.com
 #  reid.baker@sbcglobal.net

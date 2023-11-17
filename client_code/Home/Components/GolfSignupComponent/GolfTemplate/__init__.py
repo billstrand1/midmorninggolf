@@ -108,7 +108,7 @@ class GolfTemplate(GolfTemplateTemplate):
     print(activity_dict)
     
     if alert(content=ActivitiesEditTemplate(item=activity_dict), title="Update Activity Info",
-             large=True, buttons=[("Save", True), ("Cancel", False)]):      
+             large=True, buttons=[("Cancel", False), ("Save", True)]):      
       anvil.server.call('edit_activity', self.item, activity_dict)
       self.parent.raise_event('x-edit-activity', activity=activity_dict)
       

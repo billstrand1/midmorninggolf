@@ -18,7 +18,7 @@ class GolfSignupComponent(GolfSignupComponentTemplate):
     form = navigation.get_form()
     if user:
       form.label_name.text = 'Hi ' + user['first_name'] + ', '
-
+    self.label_1.text = 'Note:  Anyone can create a tee time. \nOnly Jack and the Organizer can edit / delete the tee time.'
     #Team 1: All Days
     #Team 2: All Days
     #Team 3: Weekend Only

@@ -5,7 +5,7 @@ container:
     background: ''}
 components:
 - type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{"ZBTKWN":19,"PWNVJP":41}'}
+  properties: {role: outlined-card, col_widths: '{"ZBTKWN":19}'}
   name: outlined_card_2
   layout_properties:
     col_widths: {}
@@ -21,13 +21,6 @@ components:
       col_widths: {}
       grid_position: MJOCGJ,ZBTKWN
     event_bindings: {click: button_add_click}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Note:  Only the Organizer can edit / delete the tee time.',
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'MJOCGJ,PWNVJP'}
   - type: Button
     properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Refresh Lists, font_size: null, font: '',
@@ -36,6 +29,13 @@ components:
     name: button_1
     layout_properties: {grid_position: 'SNXQYV,UPFACI'}
     event_bindings: {click: button_1_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'NXGRXF,OWTFFK'}
   - type: DataGrid
     properties:
       role: tonal-data-grid
