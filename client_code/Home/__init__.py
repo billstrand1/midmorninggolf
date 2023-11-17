@@ -22,8 +22,8 @@ class Home(HomeTemplate):
     self.init_components(**properties)
     
 # ------------------Comment out before cloning, run from data_functions Server Code
-    # print('Calling for log-in')
-    # anvil.server.call('force_debug_login')
+    print('Calling for log-in')
+    anvil.server.call('force_debug_login')
 
     
     user = navigation.the_user()
