@@ -14,9 +14,9 @@ services:
 startup: {type: form, module: Home}
 package_name: Nelson_Ladies_Golf
 allow_embedding: false
-name: Clone of Nelson Ladies Golf
+name: New Mid Morning Golf
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {logo_img: 'asset:golf ball.jpg'}
+metadata: {logo_img: 'asset:golf ball.jpg', title: Mid Morning Golf}
 startup_form: null
 db_schema:
   users:

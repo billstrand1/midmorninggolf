@@ -30,7 +30,11 @@ class GolfTemplate(GolfTemplateTemplate):
       self.link_edit.visible = True    
     if user['email'] == 'billstrand1@yahoo.com':
       self.link_delete.visible = True
+      self.link_edit.visible = True
+    if user['email'] == 'jacklcarroll@verizon.net':
+      self.link_delete.visible = True
       self.link_edit.visible = True      
+      
 #Here's where I need to break down the queries to only golf....
 #Also need to work on the priviledges for sign-up / viewing.
 #Add a "Create Tee Time button here also"

@@ -13,17 +13,18 @@ from ..AddOtherPlayers import AddOtherPlayers
 from datetime import datetime
 from datetime import date
 
-class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+# class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
+#   def __init__(self, **properties):
+#     # Set Form properties and Data Bindings.
+#     self.init_components(**properties)
 
-  def button_cancel_click(self, **event_args):
-    navigation.go_home()
+#   def button_cancel_click(self, **event_args):
+#     navigation.go_home()
 
 
-from datetime import datetime
-from datetime import date
+
+# from datetime import datetime
+# from datetime import date
 '''
 Problem with New activity not showing up in summary, need to Update Globals somehow.
 Also - check for 0:00 Time as an error
@@ -62,32 +63,32 @@ class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
     either_user_or_spouse = app_tables.participation.search(activity=activity, participant=q.any_of(user, spouse))
     if len(either_user_or_spouse) > 0:
       print('either_user_or_spouse > 0 ACTIVITY CLIENT')
-      if user['spouse'] == None:
-        print('Single person already signed up')
-        message = "You have already signed up for this Tee Time." 
-        alert(message)
-        return  
+      # if user['spouse'] == None:
+      #   print('Single person already signed up')
+      #   message = "You have already signed up for this Tee Time." 
+      #   alert(message)
+      #   return  
       
-      print('Couple already signed up')
-      message = "You or your spouse have already signed up for one or both of you, please delete and re-sign up if you'd like to make a change."
+      # print('Couple already signed up')
+      message = "You have already signed up, please delete and re-sign up if you'd like to change your comments."
       alert(message)
       return
 
-    sign_up_name = f"{user['first_name']} {user['last_name'][0]}"     
+    signup_name = user['signup_name'] #f"{user['first_name']} {user['last_name'][0]}"     
       
     signup_message = f"Enter comments here."    
     t = TextBox(placeholder=signup_message, type="text")
-    title = f"{sign_up_name}, if you have any comments please enter them below, then Save."
+    title = f"{signup_name}, if you have any comments please enter them below, then Save."
     result = alert(title=title, content=t,
 #                title="Activity Sign-Up",
              large=True,
              buttons=[("Cancel", False), ("Save", True)])
     
     if result:  #changed self.item to activity:      
-      print(f"The user chose {sign_up_name}")
+      print(f"The user chose {signup_name}")
       comment = t.text
       date_time = activity['act_date_time']
-      message = anvil.server.call('add_participant', activity, user, sign_up_name, spouse, date_time, comment)  
+      message = anvil.server.call('add_participant', activity, user, signup_name, spouse, date_time, comment)  
       alert(message)
 
     #To add another player from AddTeeTime, after creator signs up...., later...

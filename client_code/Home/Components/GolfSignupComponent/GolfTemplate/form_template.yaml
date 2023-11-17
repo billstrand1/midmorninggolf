@@ -28,8 +28,8 @@ components:
   name: label_2
   layout_properties: {grid_position: 'CUVOXU,ILVHLG'}
   data_bindings:
-  - {property: text, code: 'f" [{self.item[''owner''][''first_name'']} {self.item[''owner''][''last_name''][0]}.]
-      " +self.item[''comments'']'}
+  - {property: text, code: 'f" [{self.item[''owner''][''signup_name'']}] " +self.item[''comments'']',
+    writeback: false}
 - type: Link
   properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#77bb41',
     visible: false, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
