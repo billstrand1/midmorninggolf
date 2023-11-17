@@ -15,7 +15,7 @@ from .Components.HomeAnonComponent import HomeAnonComponent
 from .Components.HomeDetailsComponent import HomeDetailsComponent
 from .Components.HelpComponentLoggedIn import HelpComponentLoggedIn
 from .Components.HelpComponentLoggedOut import HelpComponentLoggedOut
-# import Birdies
+from .Components.Birdies import Birdies
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -40,6 +40,11 @@ class Home(HomeTemplate):
     self.link_home = Link(text='Home', icon='fa:home')
     self.menu_panel.add_component(self.link_home)
     self.link_home.set_event_handler('click', self.link_home_click)
+
+    # Birdies / Skins
+    self.link_birdies = Link(text='Birdies / Skins', icon='fa:home')
+    self.menu_panel.add_component(self.link_birdies)
+    self.link_birdies.set_event_handler('click', self.link_birdies_click)
     
     #Contacts
     self.link_contacts = Link(text='Contacts', icon="fa:book")
@@ -76,7 +81,7 @@ class Home(HomeTemplate):
   #------------------Set Active Nave State - called from navigation  
   def set_active_nav(self, state):
     self.link_home.role = 'selected' if state == 'home' else None
-    # self.link_travel.role = 'selected' if state == 'travel' else None
+    self.link_birdies.role = 'selected' if state == 'birdies' else None
     self.link_contacts.role = 'selected' if state == 'contacts' else None    
     # self.link_maps.role = 'selected' if state == 'maps' else None
     # self.link_activities.role = 'selected' if state == 'activities' else None
@@ -120,7 +125,7 @@ class Home(HomeTemplate):
       self.label_name.visible = True
 # #       self.link_activities.visible = True
       self.link_contacts.visible = True
-#       self.link_travel.visible = True        
+      self.link_birdies.visible = True        
 #       if user['admin']:
 #         self.link_admin.visible = True
 #       else: 
@@ -139,4 +144,6 @@ class Home(HomeTemplate):
 
   def link_help_click(self, **event_args):
     navigation.go_help()
-
+    
+  def link_birdies_click(self, **event_args):
+    navigation.go_birdies()

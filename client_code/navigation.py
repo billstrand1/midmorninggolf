@@ -14,6 +14,7 @@ from .Home.Components.HomeDetailsComponent import HomeDetailsComponent
 from .Home.Components.ContactsComponent.EmailList import EmailList
 from .Home.Components.HelpComponentLoggedIn import HelpComponentLoggedIn
 from .Home.Components.HelpComponentLoggedOut import HelpComponentLoggedOut
+from .Home.Components.Birdies import Birdies
 
 '''
 Share the navigation module with the Component forms, (import navigation)
@@ -142,3 +143,15 @@ def go_help():
   else:
     form.load_component(HelpComponentLoggedOut())
 
+def go_birdies():
+#   print('go_contacts')
+  set_active_nav('birdies')
+  set_title("Birdies / Skins")
+  
+  user = require_account()
+  if not user:
+    go_home()
+    return
+  
+  form = get_form()
+  form.load_component(Birdies())  

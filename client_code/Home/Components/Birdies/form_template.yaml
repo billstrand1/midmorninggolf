@@ -1,0 +1,7 @@
+container: {type: ColumnPanel}
+components:
+- name: iframe_1
+  properties: {url: www.kwclassic.org}
+  type: form:dep_syud9cmi2wfn9:IFrame
+  layout_properties: {grid_position: 'DLWBNG,ZBRVVR'}
+is_package: true
