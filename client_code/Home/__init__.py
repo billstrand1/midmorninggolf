@@ -29,7 +29,7 @@ class Home(HomeTemplate):
     
     user = navigation.the_user()
     if user:
-      print(f" User is {user['first_name']}")
+      print(f" User is {user['signup_name']}")
       
 
     #------------------CREATE MENU LINKS, UPDATE BASED UPON 'FEATURES' TABLE
@@ -68,7 +68,7 @@ class Home(HomeTemplate):
     #Set Link Visibility based upon log-in  status
     #Leaving Home and Help visible
     if user:
-      form.label_name.text = 'Hi ' + user['first_name'] + ', '
+      form.label_name.text = 'Hi ' + user['signup_name'] + ', '
       self.link_contacts.visible = True
     else:
       self.link_contacts.visible = False
@@ -125,7 +125,7 @@ class Home(HomeTemplate):
       self.label_name.visible = True
 # #       self.link_activities.visible = True
       self.link_contacts.visible = True
-      self.link_birdies.visible = True        
+      # self.link_birdies.visible = True        
 #       if user['admin']:
 #         self.link_admin.visible = True
 #       else: 

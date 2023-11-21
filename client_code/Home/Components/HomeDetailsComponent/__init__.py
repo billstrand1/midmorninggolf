@@ -22,7 +22,7 @@ class HomeDetailsComponent(HomeDetailsComponentTemplate):
     user = navigation.the_user()
     form = navigation.get_form()    
     if user:
-      form.label_name.text = 'Hi ' + user['first_name'] + ', '
+      form.label_name.text = 'Hi ' + user['signup_name'] + ', '
 
 
     
@@ -31,14 +31,16 @@ class HomeDetailsComponent(HomeDetailsComponentTemplate):
     #   spouse = user['spouse']
     spouse = None
       
-    activities_message_1, activities_message_2 = anvil.server.call('get_user_or_spouse_activities_str', user, spouse)
-    self.label_activities.text = activities_message_1
-    self.label_activities_detail.text = activities_message_2
+    # activities_message_1, activities_message_2 = anvil.server.call('get_user_or_spouse_activities_str', user, spouse)
+    # self.label_activities.text = activities_message_1
+    # self.label_activities_detail.text = activities_message_2
 #     btn.remove_from_parent()
     self.tee_times_card.add_component(GolfSignupComponent())
 
-      
-    
-    # Any code you write here will run before the form opens.
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
 
+      
+  
 

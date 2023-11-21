@@ -6,6 +6,7 @@ unique_ids:
     Home.Components.HelpComponentLoggedOut: '1698512450502314511874791.42993'
     Home.Components.HomeDetailsComponent: '1698426144086752757000069.3591'
     Home.Components.GolfSignupComponent.GolfTemplate: '1698513516627318172392317.11615'
+    Home.birthday_label: '1700603915993126199232866.70198'
     Home.Components.GolfSignupComponent.AddOtherPlayers: 6QZWBROJTE3WFDSPDAXFTRG4RW54NWTI
     Home.Components.ContactsComponent.EmailList: '1698426430626587938453650.013'
     Home.Components.GolfSignupComponent: '1698513173631986909312316.8015'
@@ -21,6 +22,7 @@ unique_ids:
   server_modules:
     _force_login: '1698425422171547509664557.43744'
     activities: '1698428042812283700059062.3835'
+    birthday_code: '1700603848684675440642980.936'
     contacts: '1698425407092404501229071.4215'
     help: '1698425445751193820358309.71545'
   assets:

@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: none,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_activities
@@ -9,7 +9,7 @@ components:
     col_widths: {}
     grid_position: IIQDMB,FEXJSJ
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: '', font_size: 11, font: menlo, spacing_above: none, icon_align: left, spacing_below: none,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_activities_detail
@@ -18,15 +18,15 @@ components:
     grid_position: PZHBRG,HTNLXX
 - name: link_1
   properties: {text: Link to Birdies  & Skins, icon: 'fa:angle-right', underline: true,
-    url: 'https://mmg-skins.anvil.app/'}
+    url: 'https://mmg-skins.anvil.app/', col_spacing: none}
   type: Link
   layout_properties: {grid_position: 'CXBYYL,AYXBLP'}
   event_bindings: {click: link_1_click}
   components: []
 - name: birthday_label_1
   properties: {}
-  type: form:dep_21edxzl0alwy:birthday_label
-  layout_properties: {grid_position: 'QKVHQW,TVAJAS'}
+  type: form:Home.birthday_label
+  layout_properties: {grid_position: 'AIBMXD,EWGOCE'}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,

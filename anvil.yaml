@@ -3,9 +3,6 @@ dependencies:
 - dep_id: dep_syud9cmi2wfn9
   version: {dev: false}
   resolution_hints: {app_id: J7WAES5F2O3IZ5FW, name: IFrame component, package_name: IFrames}
-- dep_id: dep_21edxzl0alwy
-  version: {dev: false}
-  resolution_hints: {app_id: TJQ3GBCRZEKMP4XQ, name: Birthday Component, package_name: Birthday_Component}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
