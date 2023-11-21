@@ -3,6 +3,9 @@ dependencies:
 - dep_id: dep_syud9cmi2wfn9
   version: {dev: false}
   resolution_hints: {app_id: J7WAES5F2O3IZ5FW, name: IFrame component, package_name: IFrames}
+- dep_id: dep_c4m0u37kykkfo
+  version: {dev: false}
+  resolution_hints: {app_id: 4ZOY2V7PCFCVYUVH, name: MMG Skins & Birdies, package_name: Birdies}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
