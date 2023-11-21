@@ -22,6 +22,13 @@ components:
   type: Link
   layout_properties: {grid_position: 'CXBYYL,AYXBLP'}
   event_bindings: {click: link_1_click}
+  components:
+  - name: label_bday
+    properties: {font_size: 13}
+    type: Label
+    layout_properties: {grid_position: 'JBMCID,CRYPRB'}
+    data_bindings:
+    - {property: font, code: menlo, writeback: false}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
