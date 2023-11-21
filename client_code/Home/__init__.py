@@ -15,7 +15,7 @@ from .Components.HomeAnonComponent import HomeAnonComponent
 from .Components.HomeDetailsComponent import HomeDetailsComponent
 from .Components.HelpComponentLoggedIn import HelpComponentLoggedIn
 from .Components.HelpComponentLoggedOut import HelpComponentLoggedOut
-# from .Components.Birdies import Birdies
+
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -41,7 +41,7 @@ class Home(HomeTemplate):
     self.menu_panel.add_component(self.link_home)
     self.link_home.set_event_handler('click', self.link_home_click)
 
-    Birdies / Skins
+    # Birdies / Skins
     self.link_birdies = Link(text='Birdies / Skins', icon='fa:home')
     self.menu_panel.add_component(self.link_birdies)
     self.link_birdies.set_event_handler('click', self.link_birdies_click)
@@ -81,7 +81,7 @@ class Home(HomeTemplate):
   #------------------Set Active Nave State - called from navigation  
   def set_active_nav(self, state):
     self.link_home.role = 'selected' if state == 'home' else None
-    self.link_birdies.role = 'selected' if state == 'birdies' else None
+    # self.link_birdies.role = 'selected' if state == 'birdies' else None
     self.link_contacts.role = 'selected' if state == 'contacts' else None    
     # self.link_maps.role = 'selected' if state == 'maps' else None
     # self.link_activities.role = 'selected' if state == 'activities' else None

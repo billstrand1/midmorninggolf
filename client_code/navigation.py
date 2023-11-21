@@ -14,11 +14,7 @@ from .Home.Components.HomeDetailsComponent import HomeDetailsComponent
 from .Home.Components.ContactsComponent.EmailList import EmailList
 from .Home.Components.HelpComponentLoggedIn import HelpComponentLoggedIn
 from .Home.Components.HelpComponentLoggedOut import HelpComponentLoggedOut
-# from .Home.Components.Birdies import Birdies
-import Birdies
-import Birdies.HomeDetailsComponent
-import Birdies.HomeDetailsComponent.ScoreDisplayCard
-import Birdies.HomeDetailsComponent.ScoreEditCard
+
 
 '''
 Share the navigation module with the Component forms, (import navigation)
