@@ -23,6 +23,10 @@ components:
   layout_properties: {grid_position: 'CXBYYL,AYXBLP'}
   event_bindings: {click: link_1_click}
   components: []
+- name: birthday_label_1
+  properties: {}
+  type: form:dep_21edxzl0alwy:birthday_label
+  layout_properties: {grid_position: 'QKVHQW,TVAJAS'}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
