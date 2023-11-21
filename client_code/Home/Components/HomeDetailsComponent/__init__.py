@@ -8,7 +8,6 @@ from anvil.tables import app_tables
 from .... import navigation
 from ..GolfSignupComponent import GolfSignupComponent
 
-
 class HomeDetailsComponent(HomeDetailsComponentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.

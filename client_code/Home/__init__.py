@@ -42,9 +42,9 @@ class Home(HomeTemplate):
     self.link_home.set_event_handler('click', self.link_home_click)
 
     # Birdies / Skins
-    self.link_birdies = Link(text='Birdies / Skins', icon='fa:home')
-    self.menu_panel.add_component(self.link_birdies)
-    self.link_birdies.set_event_handler('click', self.link_birdies_click)
+    # self.link_birdies = Link(text='Birdies / Skins', icon='fa:home')
+    # self.menu_panel.add_component(self.link_birdies)
+    # self.link_birdies.set_event_handler('click', self.link_birdies_click)
     
     #Contacts
     self.link_contacts = Link(text='Contacts', icon="fa:book")
