@@ -18,15 +18,15 @@ FOR ACTIVITIES EDIT:
 
 '''
 #------------------Return groups for Golf signup:
-@anvil.server.callable
-def all_groups():
-  return app_tables.users.search(
-    tables.order_by('full_name', ascending=True), ladies_golf=True)
+# @anvil.server.callable
+# def all_groups():
+#   return app_tables.users.search(
+#     tables.order_by('full_name', ascending=True), ladies_golf=True)
 
-@anvil.server.callable
-def group_3(): 
-  return  app_tables.users.search(
-    tables.order_by('full_name', ascending=True), ladies_golf_team=3)
+# @anvil.server.callable
+# def group_3(): 
+#   return  app_tables.users.search(
+#     tables.order_by('full_name', ascending=True), ladies_golf_team=3)
 
 
 #-----------------ACTIVITIES FUNCTIONS (PARTICIPATION BELOW)-----------------
@@ -34,13 +34,13 @@ def group_3():
 def update_activity(activity, activity_dict):
   activity.update(**activity_dict)
 
-@anvil.server.callable
-def get_all_future_activities_saturday():
-  print('activities: get_all_future_activities_saturday called')
-#   print(f"week_day = {week_day}")
-  all_future_activities_saturday = app_tables.activities.search(
-    tables.order_by("act_date_time", ascending=True), act_date_time=q.greater_than_or_equal_to(date.today()), week_day=5)  
-  return all_future_activities_saturday
+# @anvil.server.callable
+# def get_all_future_activities_saturday():
+#   print('activities: get_all_future_activities_saturday called')
+# #   print(f"week_day = {week_day}")
+#   all_future_activities_saturday = app_tables.activities.search(
+#     tables.order_by("act_date_time", ascending=True), act_date_time=q.greater_than_or_equal_to(date.today()), week_day=5)  
+#   return all_future_activities_saturday
 
 @anvil.server.callable
 def get_all_future_activities(): 
@@ -51,13 +51,13 @@ def get_all_future_activities():
 
   
 #-------------------------------TESTING---------------------------------------
-@anvil.server.callable
-def get_all_future_activities_weekday(): 
-  print('activities: get_all_future_activities_weekday called')
-  all_future_activities_weekday = app_tables.activities.search(
-    tables.order_by("act_date_time", ascending=True), act_date_time=q.greater_than_or_equal_to(date.today()), week_day=q.less_than(5))
+# @anvil.server.callable
+# def get_all_future_activities_weekday(): 
+#   print('activities: get_all_future_activities_weekday called')
+#   all_future_activities_weekday = app_tables.activities.search(
+#     tables.order_by("act_date_time", ascending=True), act_date_time=q.greater_than_or_equal_to(date.today()), week_day=q.less_than(5))
   
-  return all_future_activities_weekday
+#   return all_future_activities_weekday
     #, (act_date_time.weekday() < 5))
   
   

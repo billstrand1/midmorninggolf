@@ -9,7 +9,7 @@ import anvil.server
 
 # @anvil.server.callable
 # def force_debug_login():
-#   anvil.users.force_login(app_tables.users.get(email="billstrand1@yahoo.com"))
+#   anvil.users.force_login(app_tables.users.get(email="jacklcarroll@verizon.net"))
   
 # billstrand1@yahoo.com
 #  reid.baker@sbcglobal.net

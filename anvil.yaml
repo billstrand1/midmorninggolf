@@ -112,6 +112,12 @@ db_schema:
     - name: confirmed_email
       admin_ui: {width: 200}
       type: bool
+    - name: Birthday
+      admin_ui: {width: 200}
+      type: datetime
+    - name: birth_month
+      admin_ui: {width: 200}
+      type: number
   activities:
     title: activities
     client: search
@@ -128,12 +134,6 @@ db_schema:
       type: string
     - name: golf
       admin_ui: {width: 70.52174}
-      type: bool
-    - name: other
-      admin_ui: {width: 50}
-      type: bool
-    - name: dinner
-      admin_ui: {width: 53.25815399999999}
       type: bool
     - name: week_day
       admin_ui: {width: 73.255438}
