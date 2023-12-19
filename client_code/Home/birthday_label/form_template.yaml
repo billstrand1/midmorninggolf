@@ -3,6 +3,6 @@ components:
 - name: label_bday
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'OAAABF,GJJMFK'}
+  layout_properties: {grid_position: 'QKULFL,SILSSV'}
 is_package: true
 custom_component: true
