@@ -18,7 +18,7 @@ components:
     grid_position: PZHBRG,HTNLXX
 - name: link_1
   properties: {text: Link to Birdies  & Skins, icon: 'fa:angle-right', underline: true,
-    url: 'https://mmg-skins.anvil.app/', col_spacing: none}
+    url: 'https://mmg-skins.anvil.app/', col_spacing: none, visible: false}
   type: Link
   layout_properties: {grid_position: 'CXBYYL,AYXBLP'}
   event_bindings: {click: link_1_click}
