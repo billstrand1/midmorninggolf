@@ -28,7 +28,7 @@ def get_this_month_birthdays():
     birthday_list = app_tables.users.search(tables.order_by("birth_date", ascending=True), birth_month=month)
     birthday_text = ''
 
-    if birthday_list:
+    if len(birthday_list) > 0:
         birthday_text = 'Birthdays this month: \n'
         for player in birthday_list:
             if player['enabled']:               
