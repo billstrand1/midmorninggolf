@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"AKHRGZ":11,"FRGQRX":14,"ILVHLG":22,"FAYXBS":5,"MAXZUR":4,"KEYDHK":4}',
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"AKHRGZ":11,"ILVHLG":22,"FAYXBS":5,"MAXZUR":4,"KEYDHK":4}',
     spacing_below: small, background: ''}
 components:
 - type: Label
@@ -18,7 +18,7 @@ components:
     text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_activity
-  layout_properties: {grid_position: 'CUVOXU,FRGQRX'}
+  layout_properties: {grid_position: 'CUVOXU,CJNVMH'}
   data_bindings:
   - {property: text, code: 'f"{self.item[''course'']} @ {self.item[''activity'']}"'}
 - type: Label
