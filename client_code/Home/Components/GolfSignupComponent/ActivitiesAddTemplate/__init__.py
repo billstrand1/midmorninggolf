@@ -13,23 +13,11 @@ from ..AddOtherPlayers import AddOtherPlayers
 from datetime import datetime
 from datetime import date
 
-# class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
-#   def __init__(self, **properties):
-#     # Set Form properties and Data Bindings.
-#     self.init_components(**properties)
 
-#   def button_cancel_click(self, **event_args):
-#     navigation.go_home()
-
-
-
-# from datetime import datetime
-# from datetime import date
 '''
 Problem with New activity not showing up in summary, need to Update Globals somehow.
 Also - check for 0:00 Time as an error
 Also - check for more than one Category selected
-
 '''
 
 class ActivitiesAddTemplate(ActivitiesAddTemplateTemplate):
