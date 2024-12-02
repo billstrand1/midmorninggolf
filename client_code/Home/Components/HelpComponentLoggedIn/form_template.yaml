@@ -1,75 +1,72 @@
-container: {type: ColumnPanel}
 components:
-- type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{}'}
-  name: outlined_card_1
-  layout_properties:
-    col_widths: {}
-    grid_position: JENAGH,HUFAZD
-  components:
-  - type: Label
-    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Contact Support, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: title_label
-    layout_properties:
+- components:
+  - layout_properties:
       col_widths: {}
       grid_position: YJMQAI,UPAYQX
-  - type: Label
-    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1_copy
-    layout_properties:
+    name: title_label
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: Contact Support, tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties:
       col_widths: {}
       grid_position: FRZPMF,KIOMHX
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ff2600',
-      visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
-      spacing_below: none, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: name_label
-    layout_properties:
+    name: label_1_copy
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: 'From:', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties:
       col_widths: {}
       grid_position: ZMEOAF,PGVEJE
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ff2600',
-      visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
-      spacing_below: none, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: email_label
-    layout_properties:
+    name: name_label
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '#ff2600', icon: '', icon_align: left, italic: false, role: null, spacing_above: none, spacing_below: none, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties:
       col_widths: {}
       grid_position: ZMEOAF,URCRUM
-  - type: Label
-    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Questions or Comments:', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: comments_title
-    layout_properties:
+    name: email_label
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '#ff2600', icon: '', icon_align: left, italic: false, role: null, spacing_above: none, spacing_below: none, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties:
       col_widths: {}
       grid_position: KNKOMU,KQCOIP
-  - type: TextArea
-    properties: {role: null, align: left, height: 107, tooltip: '', placeholder: Enter questions here....,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: comment_area
-    layout_properties:
+    name: comments_title
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: 'Questions or Comments:', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties:
       col_widths: {}
       grid_position: UMIYGC,ZLMVSD
-  - type: Button
-    properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: 'Submit
-
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false, icon: ''}
-    name: submit_button
+    name: comment_area
+    properties: {align: left, auto_expand: false, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', height: 107, italic: false, placeholder: Enter questions here...., role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: TextArea
+  - event_bindings: {click: submit_button_click}
     layout_properties:
       col_widths: {}
       grid_position: LKTDIB,DMUIWV
-    event_bindings: {click: submit_button_click}
+    name: submit_button
+    properties:
+      align: center
+      background: ''
+      bold: false
+      border: ''
+      enabled: true
+      font: ''
+      font_size: null
+      foreground: ''
+      icon: ''
+      icon_align: left
+      italic: false
+      role: tonal-button
+      spacing_above: small
+      spacing_below: small
+      text: |
+        Submit
+      tooltip: ''
+      underline: false
+      visible: true
+    type: Button
+  layout_properties:
+    col_widths: {}
+    grid_position: JENAGH,HUFAZD
+  name: outlined_card_1
+  properties: {col_widths: '{}', role: outlined-card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
 is_package: true
