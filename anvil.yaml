@@ -1,187 +1,186 @@
+allow_embedding: false
 correct_dependency_ids: {}
+db_schema:
+  activities:
+    client: search
+    columns:
+    - admin_ui: {width: 84.26087000000001}
+      name: activity
+      type: string
+    - admin_ui: {width: 110.26087000000001}
+      name: course
+      type: string
+    - admin_ui: {width: 111.25543799999997}
+      name: comments
+      type: string
+    - admin_ui: {width: 70.52174}
+      name: golf
+      type: bool
+    - admin_ui: {width: 73.255438}
+      name: week_day
+      type: number
+    - admin_ui: {width: 112}
+      name: owner
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: act_date_time
+      type: date
+    server: full
+    title: activities
+  comments:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 266.26087}
+      name: comments
+      type: string
+    - admin_ui: {width: 200}
+      name: created
+      type: datetime
+    server: full
+    title: comments
+  participation:
+    client: search
+    columns:
+    - admin_ui: {width: 133.76630999999998}
+      name: activity
+      target: activities
+      type: link_single
+    - admin_ui: {width: 122.26087000000001}
+      name: sign_up_name
+      type: string
+    - admin_ui: {width: 200}
+      name: comment
+      type: string
+    - admin_ui: {width: 169.258154}
+      name: participant
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: participation_date_time
+      type: date
+    server: full
+    title: participation
+  users:
+    client: none
+    columns:
+    - admin_ui: {width: 147.26086950302124}
+      name: full_name
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 128.258154}
+      name: ladies_golf_team
+      type: number
+    - admin_ui: {width: 121}
+      name: ladies_golf
+      type: bool
+    - admin_ui: {width: 100}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 84.26086950302124}
+      name: admin
+      type: bool
+    - admin_ui: {width: 103}
+      name: ghin_no
+      type: string
+    - admin_ui: {width: 103.26086950302124}
+      name: first_name
+      type: string
+    - admin_ui: {width: 133.26086950302124}
+      name: last_name
+      type: string
+    - admin_ui: {width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 143.51358556747437}
+      name: phone
+      type: string
+    - admin_ui: {width: 200}
+      name: birth_date
+      type: string
+    - admin_ui: {width: 50}
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 53}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 189.25}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 155.519026}
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {width: 102.26086950302124}
+      name: comments
+      type: string
+    - admin_ui: {width: 95.5}
+      name: date_joined
+      type: date
+    - admin_ui: {width: 146}
+      name: updated
+      type: datetime
+    - admin_ui: {width: 115}
+      name: created
+      type: datetime
+    - admin_ui: {width: 132}
+      name: super_user
+      type: bool
+    - admin_ui: {width: 92.26086950302124}
+      name: tpc_hcp
+      type: number
+    - admin_ui: {width: 86.25}
+      name: cwv_hcp
+      type: number
+    - admin_ui: {width: 74.26086950302124}
+      name: index
+      type: number
+    - admin_ui: {width: 119}
+      name: tournament_director
+      type: bool
+    - admin_ui: {width: 142}
+      name: playday_director
+      type: bool
+    - admin_ui: {width: 85.52174}
+      name: spouse
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: Birthday
+      type: datetime
+    - admin_ui: {width: 200}
+      name: birth_month
+      type: number
+    server: full
+    title: Users
 dependencies:
 - dep_id: dep_syud9cmi2wfn9
-  version: {dev: false}
   resolution_hints: {app_id: J7WAES5F2O3IZ5FW, name: IFrame component, package_name: IFrames}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: false, enable_automatically: false, use_email: true,
-    confirm_email: false, allow_remember_me: true, remember_me_days: 365}
-  server_config: {user_table: users}
-- source: /runtime/services/anvil/email.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: Home}
-package_name: MidMorningGolf
-allow_embedding: false
-name: New Mid Morning Golf
-runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+  version: {dev: false}
 metadata: {logo_img: 'asset:golf ball.jpg', title: Mid Morning Golf}
-startup_form: null
-db_schema:
-  users:
-    title: Users
-    client: none
-    server: full
-    columns:
-    - name: full_name
-      admin_ui: {width: 147.26086950302124}
-      type: string
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: ladies_golf_team
-      admin_ui: {width: 128.258154}
-      type: number
-    - name: ladies_golf
-      admin_ui: {width: 121}
-      type: bool
-    - name: enabled
-      admin_ui: {width: 100}
-      type: bool
-    - name: admin
-      admin_ui: {width: 84.26086950302124}
-      type: bool
-    - name: ghin_no
-      admin_ui: {width: 103}
-      type: string
-    - name: first_name
-      admin_ui: {width: 103.26086950302124}
-      type: string
-    - name: last_name
-      admin_ui: {width: 133.26086950302124}
-      type: string
-    - name: password_hash
-      admin_ui: {width: 200}
-      type: string
-    - name: phone
-      admin_ui: {width: 143.51358556747437}
-      type: string
-    - name: birth_date
-      admin_ui: {width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {width: 50}
-      type: number
-    - name: signed_up
-      admin_ui: {width: 53}
-      type: datetime
-    - name: last_login
-      admin_ui: {width: 189.25}
-      type: datetime
-    - name: remembered_logins
-      admin_ui: {width: 155.519026}
-      type: simpleObject
-    - name: comments
-      admin_ui: {width: 102.26086950302124}
-      type: string
-    - name: date_joined
-      admin_ui: {width: 95.5}
-      type: date
-    - name: updated
-      admin_ui: {width: 146}
-      type: datetime
-    - name: created
-      admin_ui: {width: 115}
-      type: datetime
-    - name: super_user
-      admin_ui: {width: 132}
-      type: bool
-    - name: tpc_hcp
-      admin_ui: {width: 92.26086950302124}
-      type: number
-    - name: cwv_hcp
-      admin_ui: {width: 86.25}
-      type: number
-    - name: index
-      admin_ui: {width: 74.26086950302124}
-      type: number
-    - name: tournament_director
-      admin_ui: {width: 119}
-      type: bool
-    - name: playday_director
-      admin_ui: {width: 142}
-      type: bool
-    - name: spouse
-      admin_ui: {width: 85.52174}
-      type: link_single
-      target: users
-    - name: confirmed_email
-      admin_ui: {width: 200}
-      type: bool
-    - name: Birthday
-      admin_ui: {width: 200}
-      type: datetime
-    - name: birth_month
-      admin_ui: {width: 200}
-      type: number
-  activities:
-    title: activities
-    client: search
-    server: full
-    columns:
-    - name: activity
-      admin_ui: {width: 84.26087000000001}
-      type: string
-    - name: course
-      admin_ui: {width: 110.26087000000001}
-      type: string
-    - name: comments
-      admin_ui: {width: 111.25543799999997}
-      type: string
-    - name: golf
-      admin_ui: {width: 70.52174}
-      type: bool
-    - name: week_day
-      admin_ui: {width: 73.255438}
-      type: number
-    - name: owner
-      admin_ui: {width: 112}
-      type: link_single
-      target: users
-    - name: act_date_time
-      admin_ui: {width: 200}
-      type: date
-  participation:
-    title: participation
-    client: search
-    server: full
-    columns:
-    - name: activity
-      admin_ui: {width: 133.76630999999998}
-      type: link_single
-      target: activities
-    - name: sign_up_name
-      admin_ui: {width: 122.26087000000001}
-      type: string
-    - name: comment
-      admin_ui: {width: 200}
-      type: string
-    - name: participant
-      admin_ui: {width: 169.258154}
-      type: link_single
-      target: users
-    - name: participation_date_time
-      admin_ui: {width: 200}
-      type: date
-  comments:
-    title: comments
-    client: none
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: comments
-      admin_ui: {width: 266.26087}
-      type: string
-    - name: created
-      admin_ui: {width: 200}
-      type: datetime
+name: New Mid Morning Golf
+package_name: MidMorningGolf
 renamed: true
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-full, version: 2}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: true, allow_signup: false, confirm_email: false, enable_automatically: false, remember_me_days: 365, use_email: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/email.yml
+startup: {module: Home, type: form}
+startup_form: null
