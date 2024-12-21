@@ -1,12 +1,9 @@
-container: {type: ColumnPanel}
 components:
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Please Log-In using your Birdies / Skins password., font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
-    bold: true, underline: false, icon: ''}
-  name: label_1
-  layout_properties:
+- layout_properties:
     col_widths: {}
     grid_position: LOXXOY,HGUISC
+  name: label_1
+  properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'It looks like your browser no longer remembers your password.  Please Log-In with you email address, your password is probably 123.', tooltip: '', underline: false, visible: true}
+  type: Label
+container: {type: ColumnPanel}
 is_package: true

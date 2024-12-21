@@ -1,9 +1,9 @@
-container: {type: DataRowPanel}
 components:
-- type: Label
-  properties: {}
-  name: name_label
+- data_bindings:
+  - {code: 'self.item[''first_name''] + '' '' + self.item[''last_name'']', property: text}
   layout_properties: {column: NMAFDC}
-  data_bindings:
-  - {property: text, code: 'self.item[''first_name''] + '' '' + self.item[''last_name'']'}
+  name: name_label
+  properties: {}
+  type: Label
+container: {type: DataRowPanel}
 is_package: true
