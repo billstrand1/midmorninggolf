@@ -31,14 +31,17 @@ def get_this_month_birthdays():
     if len(birthday_list) > 0:
         birthday_text = 'Birthdays this month: \n'
         for player in birthday_list:
-            if player['enabled']:               
+            if player['enabled']:
+              # if player['email'] == 'billstrand1@yahoo.com':
+              #   break
                 # print(f"{player['Name']}: {player['Birthday']}")
                 age = year - player['Birthday'].year
                 if current_day > player['Birthday'].day:
                   verb = 'turned'
                 else: verb = 'will be'
                 # print(f"{player['Name']} will be {age} on {month_text} {player['Birthday'].day}")
-                birthday_text += f"{player['Name']} {verb} {age} on {month_text} {player['Birthday'].day}\n"
+                if player['email'] != 'billstrand1@yahoo.com':
+                  birthday_text += f"{player['Name']} {verb} {age} on {month_text} {player['Birthday'].day}\n"
 
     print(birthday_text)
     return birthday_text
