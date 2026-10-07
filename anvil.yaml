@@ -171,7 +171,11 @@ metadata: {logo_img: 'asset:golf ball.jpg', title: Mid Morning Golf}
 name: New Mid Morning Golf
 package_name: MidMorningGolf
 renamed: true
-runtime_options: {client_version: '3', server_spec: null, server_version: python3-full, version: 2}
+runtime_options:
+  client_version: '3'
+  server_spec: {}
+  server_version: python3-full
+  version: 2
 services:
 - client_config: {}
   server_config: {}
